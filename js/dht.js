@@ -1,7 +1,6 @@
 // Standard FIPS 202 SHA-3 implementation
 
 const servers = ['alpha', 'beta', 'gamma'];
-const key = 'test';
 
 function dht(list, key) {
     const { SHA3 } = require('sha3');
