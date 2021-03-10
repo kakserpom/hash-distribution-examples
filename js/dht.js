@@ -7,7 +7,7 @@ function dht(list, key) {
     const hash = new SHA3(224);
     hash.update(key);
     const Decimal = require('decimal.js');
-    return list[(new Decimal('0x' + hash.digest('hex'))).mod(servers.length)];
+    return list[(new Decimal('0x' + hash.digest('hex'))).mod(list.length)];
 }
 if (process.argv.length < 3) {
     console.log("USAGE: dht.js <key>");
